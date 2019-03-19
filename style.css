@@ -1,0 +1,342 @@
+/*CSS Variables*/
+:root{
+  --primary: #ff4a52;
+  --secondary: #ddd;
+  --dark: #000;
+  --light:  #fff;
+  --shadow: 0 1px 5px rgba(104, 104, 104, 0.8);
+
+}
+
+html{
+  box-sizing: border-box;
+  font-family: verdana;
+  font-size: 1rem;
+  color: var(--dark);
+
+}
+
+
+body{
+  background: var(--dark);
+  margin: 30px 50px;
+  line-height: 1.4;
+
+}
+
+.tophead {
+  height: 100%;
+  background-color: var(--primary);
+  display: grid;
+  align-items:start;
+}
+
+
+.tophead p{
+  font-family: verdana;
+
+
+}
+
+.btn{
+  background-color: var(--dark);
+  color:var(--light);
+  padding: 0.6rem 1.3rem;
+  text-decoration: none;
+  border: 0;
+
+}
+
+img{
+  max-width: 100%;
+}
+
+.wrapper{
+  display: grid;
+  grid-gap: 20px;
+}
+
+/*--Navigation--*/
+.main-nav ul{
+  display: grid;
+  grid-gap: 20px;
+  padding: 0;
+  list-style: none;
+  grid-template-columns: repeat(5, 1fr);
+}
+
+.main-nav a {
+  background: var(--secondary);
+  display: block;
+  text-decoration: none;
+  padding: 0.8rem;
+  text-align: center;
+  color: var(--dark);
+  text-transform: uppercase;
+  font-size: 1.1rem;
+  box-shadow: var(--shadow);
+
+}
+
+
+.main-nav a:hover{
+    background: var(--primary);
+    color: var(--light);
+
+}
+
+/* top container */
+
+.top-container{
+  display: grid;
+  grid-gap: 20px;
+}
+
+/* showcase */
+.showcase{
+  display: grid;
+  min-height: 400px;
+  background-image: url(img/marlon.png);
+  background-size: cover;
+  background-position: center;
+  padding:3rem;
+  display: flex;
+  flex-direction: column;
+  align-items:start;
+  justify-content: center;
+  box-shadow: var(--shadow);
+
+}
+
+
+
+
+.showcase h1{
+  font-size: 3rem;
+  margin-bottom: 0;
+  color: var(--light);
+
+}
+
+.showcase p {
+
+  font-size: 1.5rem;
+  margin-top: 0;
+  color:var(--light);
+
+}
+
+.showcase a:hover{
+    background: var(--secondary);
+    color: var(--light);
+
+}
+
+
+
+/* Boxes */
+.boxes {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+
+.boxes :hover{
+    background-color: var(--primary);
+    color: var(--light);
+
+
+
+
+}
+
+
+
+
+
+
+
+.trial{
+  height: 22vh;
+  background: var(--secondary);
+  box-shadow: var(--shadow);
+  display: grid;
+  grid-gap: 30px;
+  grid-template-columns: repeat(4, 1fr);
+  padding: 0rem;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.box{
+  background: var(--secondary);
+  text-align: center;
+  padding: 1.5rem 2rem;
+  box-shadow: var(--shadow);
+}
+
+
+.box a:hover{
+    background: var(--light);
+    color: var(--dark);
+}
+
+.infohover :hover{
+    background: var(--primary);
+    color: var(--light);
+
+  }
+
+
+
+
+
+
+
+
+/* info */
+.info{
+  background: var(--secondary);
+  box-shadow: var(--shadow);
+display: grid;
+grid-gap: 30px;
+grid-template-columns: repeat(2, 1fr);
+padding: 3rem;
+}
+
+
+
+
+.info a:hover{
+    background: var(--light);
+    color: var(--dark);
+
+  }
+
+/* end card */
+
+  .end{
+    background: var(--secondary);
+    box-shadow: var(--shadow);
+  display: grid;
+  grid-gap: 30px;
+  grid-template-columns: repeat(2, 1fr);
+  padding: 3rem;
+  }
+
+  .endhover :hover{
+      background: var(--primary);
+      color: var(--light);
+
+    }
+
+
+
+  .end a:hover{
+      background: var(--light);
+      color: var(--dark);
+
+    }
+
+
+
+
+
+
+/* Portfolio */
+.portfolio {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+
+
+.portfolio img{
+  width: 100%;
+  box-shadow: var(--shadow);
+
+}
+
+/* footer */
+footer{
+.margin-top: 2rem;
+background:var(--secondary);
+color: var(--dark);
+padding: 1rem;
+text-align: center;
+}
+
+
+
+
+
+
+
+
+
+/* media queries  */
+
+@media(max-width:700px){
+  .top-container{
+    grid-template-areas:
+  'showcase showcase'
+
+  }
+.showcase h1{
+  font-size: 2.5rem;
+  }
+
+.main-nav ul {
+  grid-template-columns: 1fr;
+
+}
+
+.info {
+  grid-template-columns: 1fr;
+
+}
+
+.info .btn{
+  display:block;
+  text-align: center;
+  margin: auto;
+  }
+
+
+  .end {
+    grid-template-columns: 1fr;
+
+  }
+
+  .end .btn{
+    display:block;
+    text-align: center;
+    margin: auto;
+    }
+
+
+
+
+}
+
+@media(max-width:500px){
+  top-container{
+    grid-template-areas:
+    'showcase'
+
+  }
+}
